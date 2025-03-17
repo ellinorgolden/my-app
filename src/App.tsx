@@ -1,13 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { ButtonGroup } from '@mui/material';
 import './App.css'
+import Button from "@mui/material/Button";
 
 function App() {
 
   return (
     <>
-
+    <div>
+    <ButtonGroup variant="contained" aria-label="Basic button group">
+      <Button>One</Button>
+      <Button>Two</Button>
+      <Button>Three</Button>
+</ButtonGroup>
+    </div>
     </>
   )
 }
