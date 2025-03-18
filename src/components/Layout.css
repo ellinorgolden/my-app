@@ -1,0 +1,105 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Layout */
+.layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Container (sidemenu + main) */
+.container {
+    display: flex;
+    flex: 1;
+}
+
+/* Sidemeny */
+.sidemenu {
+    width: 250px;
+    background: #444;
+    padding: 20px;
+}
+
+.sidemenu ul {
+    list-style: none;
+}
+
+.sidemenu ul li {
+    margin: 15px 0;
+}
+
+.sidemenu ul li a {
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 10px;
+    background: #555;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+.sidemenu ul li a:hover {
+    background: #666;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: 20px;
+    background: white;
+    border-left: 2px solid #ddd;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Språkvelger */
+.language-switcher {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.language-switcher button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.language-switcher button:hover {
+    transform: scale(1.1);
+}
+
+.flag-icon {
+    width: 30px;
+    height: auto;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out;
+}

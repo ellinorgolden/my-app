@@ -1,19 +1,18 @@
-import { ButtonGroup } from '@mui/material';
-import './App.css'
-import Button from "@mui/material/Button";
+import "./App.css"; 
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import About from "./components/About";
 
 function App() {
-
   return (
-    <>
-    <div>
-    <ButtonGroup variant="contained" aria-label="Basic button group">
-      <Button>One</Button>
-      <Button>Two</Button>
-      <Button>Three</Button>
-</ButtonGroup>
-    </div>
-    </>
+    <Router>
+      <Layout>
+        <Routes>
+
+        <Route path="/about" element={<About />} />
+        </Routes>
+      </Layout>
+    </Router>
   )
 }
 
