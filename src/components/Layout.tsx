@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import "./Layout.css"; 
 import { useTranslation } from "react-i18next";
 import { useState } from "react";
+import ToggleButton from '@mui/material/ToggleButton';
+import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
+import DarkModeIcon from '@mui/icons-material/DarkMode';
+import LightModeSharpIcon from '@mui/icons-material/LightModeSharp';
+import ThemeToggle from "./ThemeToggle";
 
 interface LayoutProps {
   children: ReactNode;
@@ -20,16 +25,18 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="layout">
-      {/* Header */}
       <header>
-        <h1>{t("welcome")}</h1>
-        <div className="language-switcher">
-        <button onClick={() => i18n.changeLanguage("en")}>
-            <img src="/flags/gb.svg" alt="English" className="flag-icon" />
-          </button>
-          <button onClick={() => i18n.changeLanguage("no")}>
-            <img src="/flags/no.svg" alt="Norsk" className="flag-icon" />
-          </button>
+        <div className="preferences-panel">
+          <div className="language-switcher">
+            <button onClick={() => i18n.changeLanguage("en")}>
+              <img src="/flags/gb.svg" alt="English" className="flag-icon" />
+            </button>
+            <button onClick={() => i18n.changeLanguage("no")}>
+              <img src="/flags/no.svg" alt="Norsk" className="flag-icon" />
+            </button>
+          </div>
+          <h1>{t("welcome")}</h1>
+          <ThemeToggle />
         </div>
       </header>
 
