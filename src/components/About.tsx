@@ -1,5 +1,11 @@
-const About = () => {
-    return <h2>This is me</h2>;
-  };
-  
-  export default About
+import React from "react";
+
+const About: React.FC = () => {
+  return (
+    <div>
+      <h1>About</h1>
+    </div>
+  );
+};
+
+export default About; 

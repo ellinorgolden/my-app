@@ -4,16 +4,22 @@ import { initReactI18next } from "react-i18next";
 const resources = {
   en: {
     translation: {
-      welcome: "Welcome to my website",
-      language: "Change language",
+      welcome: "Welcome to my React portfolio",
+      home: "Home",
       about: "About me",
+      cv: "CV",
+      projects: "Projects",
+      contact: "Contact",
     },
   },
   no: {
     translation: {
-      welcome: "Velkommen til min nettside",
-      language: "Bytt språk",
+      welcome: "Velkommen til min React portefølje",
+      home: "Hjem",
       about: "Om meg",
+      cv: "CV",
+      projects: "Prosjekter",
+      contact: "Kontakt",
     },
   },
 };
@@ -25,7 +31,7 @@ i18n
     lng: "en", // Standard språk
     fallbackLng: "en",
     interpolation: { escapeValue: false },
-    debug: true, // 🔍 Gir feilmeldinger i konsollen
+    debug: true, // Feilmeldinger i konsollen
   });
 
 export default i18n;
