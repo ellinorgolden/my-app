@@ -1,7 +1,7 @@
 import "./App.css"; 
 import './components/layout.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import "./i18n";
+import "./contex/i18n";
 import Layout from "./components/Layout";
 import About from "./components/About";
 import Home from "./components/Home";
