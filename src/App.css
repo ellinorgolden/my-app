@@ -10,6 +10,11 @@
     --submenu-hover: #e0e0e0;
     --footer-background: #eeeeee; 
     --footer-text: #222222;
+    --bg-color: #ffffff;
+    --text-color: #222;
+    --link-color: #5f92b4;
+    --container-bg: #f0f0f0;
+    --shadow-color: rgba(0, 0, 0, 0.05);
 }
 
 [data-theme="dark"] {
@@ -24,4 +29,9 @@
     --submenu-hover: #777;
     --footer-background: #111;
     --footer-text: #bbb;
+    --bg-color: #1e1e1e;
+    --text-color: #f0f0f0;
+    --link-color: #abc7e4;
+    --container-bg: #2a2a2a;
+    --shadow-color: rgba(0, 0, 0, 0.2);
 }
