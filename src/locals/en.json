@@ -33,5 +33,10 @@
     "designTools": "Design Tools",
     "computerEngineer": "Computer Engineer",
     "tanteoInfo": "Missing due to legal reasons...",
-    "prospectorInfo":""
+    "aboutContent1": "As a true resident of the city of planks, I know the importance of building solid solutions – not just from wood, but also on the web. That's why I'm looking for positions where I can help create digital services that can withstand both weather, wind, and demanding user requirements.",
+    "aboutContent2": "A bit about me: I have three years of experience in development and played a key role in building the Pulse Prospector application for BARCO AS. The user interface was built to be responsive and gives a full overview of each projector's functions, allowing control via laptop, tablet, or mobile. The solution has proven especially useful for calibrating projectors installed in hard-to-reach locations.",
+    "aboutContent3": "I also participated in a project where an existing application received a more intuitive and visually appealing design, and I often created simple mockups in Figma to communicate my vision. Technologies I've worked with include Angular, CSS, HTML, and TypeScript/JavaScript, as well as Figma, Jira, and Confluence.",
+    "aboutContent4": "I'm always eager to grow and stay curious about how AI can improve applications even further. This spring, I'm taking a micro-course in AI at HIOF.",
+    "aboutContent5": "As a person, I'm energetic and lively. I enjoy collaboration but thrive best when responsibilities are clearly distributed and we consult regularly throughout the process. This ensures both efficiency and a great working environment.",
+    "aboutContent6": "Just like the city ferry in Fredrikstad, I like things to flow seamlessly – especially when it comes to digital solutions!"
 }

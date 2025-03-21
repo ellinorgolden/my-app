@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import dashboardImg from '../assets/images/dashboard.png';
 import positionImg from '../assets/images/position.png';
 import PitchImg from '../assets/images/positionWithPitch.png';
@@ -8,9 +7,6 @@ import settingImg from '../assets/images/settings.png';
 import ImageModal from "./imageModal";
 
 const Prospector = () => {
-  
-   const { t } = useTranslation();
-
     return (
       <div>
       <header>
