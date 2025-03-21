@@ -1,0 +1,12 @@
+.about-section {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+  }
+  
+  .about-section p {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+    color: var(--text-color);
+  }

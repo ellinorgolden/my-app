@@ -32,7 +32,11 @@
     "developmentTools": "Utvikler verktøy",
     "designTools": "Design verktøy",
     "computerEngineer": "Dataingeniør",
-    "tanteoInfo": "Mangler på grunn av juridiske årsaker...",
-    "prospectorInfo":"Angular 14 frontend som serves via Node.JS direkte fra projektoren. Angular Material and Barcos interne design guidelines." 
-
+    "tanteoInfo": "Mangler på grunn av juridiske årsaker...", 
+    "aboutContent1": "Som en ekte plankeby-boer vet jeg at det gjelder å bygge solide løsninger – ikke bare av tre, men også på nett. Derfor søker jeg stillinger hvor jeg kan bidra til å bygge digitale tjenester som tåler både vær, vind og krevende brukerkrav.",
+    "aboutContent2": "Litt om meg: Jeg har tre års erfaring med utvikling og har blant annet hatt en nøkkelrolle i utviklingen av applikasjonen Pulse Prospector for BARCO AS. Brukergrensesnittet er laget responsivt og gir full oversikt over funksjonene til hver enkelt projektor som gjør det mulig å styre dem fra en laptop, nettbrett eller mobil. Løsningen har vist seg spesielt nyttig for kalibrering av projektorer installert på vanskelig tilgjengelige steder.",
+    "aboutContent3": "I tillegg deltok jeg i et prosjekt hvor en eksisterende applikasjon fikk et mer intuitivt og visuelt tiltalende design og laget ofte enkle mock ups i Figma for å vise min visjon. Teknologier jeg har jobbet med inkluderer Angular, CSS, HTML og Typescript/JavaScript, Figma, Jira og Confluence. ",
+    "aboutContent4": "Jeg er alltid ivrig etter å utvikle meg videre og føler meg veldig nysgjerrig på hvordan KI kan bidra til å forbedre applikasjoner ytterligere og har meldt meg på et Micro studie denne våren hos HIOF.",
+    "aboutContent5": "Som person er jeg et livlig vesen. Jeg liker å samarbeide, men trives aller best når vi fordeler ansvarsområder og heller diskuterer og rådfører oss jevnlig underveis. Dette sikrer både effektivitet og et godt arbeidsmiljø. ",
+    "aboutContent6": "Akkurat som byferga i Fredrikstad, liker jeg at ting flyter sømløst – spesielt når det gjelder digitale løsninger!"
 }
