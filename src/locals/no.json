@@ -22,7 +22,7 @@
     "onlineStudy": "Nettstudie",
     "skills": "Ferdigheter",
     "languages": "Languages",
-    "norwegian": "Norwegian",
+    "norwegian": "Norsk",
     "english": "English",
     "fluent": "Flytende",
     "motherTongue": "Morsmål",
@@ -31,5 +31,8 @@
     "VersionControlCollaboration": "Versjonskontroll og samarbeid",
     "developmentTools": "Utvikler verktøy",
     "designTools": "Design verktøy",
-    "computerEngineer": "Dataingeniør"
+    "computerEngineer": "Dataingeniør",
+    "tanteoInfo": "Mangler på grunn av juridiske årsaker...",
+    "prospectorInfo":"Angular 14 frontend som serves via Node.JS direkte fra projektoren. Angular Material and Barcos interne design guidelines." 
+
 }
