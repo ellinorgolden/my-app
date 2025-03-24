@@ -12,7 +12,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
 
-    const { t, i18n } = useTranslation();
+    const { t } = useTranslation();
 
     const [isProjectMenuOpen, setIsProjectMenuOpen] = useState(false);
 
