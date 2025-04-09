@@ -5,20 +5,17 @@
     font-family: Arial, sans-serif;
 }
 
-/* Kroppen tar i bruk variablene */
 body {
     background-color: var(--background-color);
     color: var(--text-color);
 }
 
-/* Layout-stil */
 .layout {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-/* Header */
 header {
     background-color: var(--background-color);
     color: var(--text-color);
@@ -26,13 +23,11 @@ header {
     padding: 1rem;
 }
 
-/* Container */
 .container {
     display: flex;
     flex: 1;
 }
 
-/* Sidemeny */
 .sidemenu {
     width: 250px;
     background: var(--menu-background);
@@ -62,7 +57,6 @@ header {
     background: var(--button-hover);
 }
 
-/* Hovedinnhold */
 main {
     flex: 1;
     padding: 20px;
@@ -70,7 +64,6 @@ main {
     border-left: 2px solid var(--border-color);
 }
 
-/* Footer */
 footer {
     background: var(--footer-background);
     color: var(--footer-text);
@@ -78,7 +71,6 @@ footer {
     padding: 1rem;
 }
 
-/* Språkvelger */
 .language-switcher {
     display: flex;
     gap: 10px;
@@ -96,7 +88,6 @@ footer {
     transform: scale(1.1);
 }
 
-/* Flag-ikon */
 .flag-icon {
     width: 30px;
     height: auto;
@@ -104,7 +95,6 @@ footer {
     transition: transform 0.2s ease-in-out;
 }
 
-/* Meny-knapp */
 .menu-btn {
     text-decoration: none;
     color: var(--menu-text);
@@ -124,7 +114,6 @@ footer {
     background: var(--button-hover);
 }
 
-/* Dropdown */
 .submenu {
     background: var(--submenu-background);
     list-style: none;
@@ -156,7 +145,6 @@ footer {
     display: block;
 }
 
-/* Preferences Panel */
 .preferences-panel {
     display: flex;
     justify-content: space-between;
@@ -164,4 +152,49 @@ footer {
     gap: 15px;
     padding: 10px;
     border-radius: 8px;
+}
+
+.hamburger-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; /* juster etter behov */
+  }
+  
+.hamburger {
+    display: none;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidemenu {
+        display: none;
+        width: 100%;
+        padding: 10px;
+        border-top: 2px solid var(--border-color);
+    }
+
+    .sidemenu.active {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        top: 1rem;
+        right: 1rem;
+        z-index: 10;
+    }
+
+    main {
+        border-left: none;
+    }
+
 }

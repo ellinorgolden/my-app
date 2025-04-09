@@ -15,9 +15,19 @@ const Layout = ({ children }: LayoutProps) => {
     const { t } = useTranslation();
 
     const [isProjectMenuOpen, setIsProjectMenuOpen] = useState(false);
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     const toggleProjectMenu = () => {
       setIsProjectMenuOpen(!isProjectMenuOpen);
+    };
+
+    const toggleMobileMenu = () => {
+      setIsMobileMenuOpen(!isMobileMenuOpen);
+    };
+
+    const closeMobileMenu = () => {
+      setIsMobileMenuOpen(false);
+      setIsProjectMenuOpen(false);
     };
 
   return (
@@ -30,12 +40,28 @@ const Layout = ({ children }: LayoutProps) => {
         </div>
       </header>
 
+      <div className="hamburger-container">
+        <button
+            className="hamburger"
+            onClick={toggleMobileMenu}
+            aria-label="Toggle menu">
+            ☰
+        </button>
+      </div>
+
       <div className="container">
-        <nav className="sidemenu">
+
+      <nav className={`sidemenu ${isMobileMenuOpen ? "active" : ""}`}>
           <ul>
-            <li><Link to="/">{t("home")}</Link></li>
-            <li><Link to="/about">{t("about")}</Link></li>
-            <li><Link to="/cv">{t("cv")}</Link></li>
+            <li>
+              <Link to="/" onClick={closeMobileMenu}>{t("home")}</Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={closeMobileMenu}>{t("about")}</Link>
+            </li>
+            <li>
+              <Link to="/cv" onClick={closeMobileMenu}>{t("cv")}</Link>
+            </li>
 
             <li className={`dropdown ${isProjectMenuOpen ? "open" : ""}`}>
               <button onClick={toggleProjectMenu} className="menu-btn">
@@ -43,15 +69,20 @@ const Layout = ({ children }: LayoutProps) => {
               </button>
               {isProjectMenuOpen && (
                 <ul className="submenu">
-                  <li><Link to="/projects/prospector" onClick={() => setIsProjectMenuOpen(false)}>Prospector</Link></li>
-                  <li><Link to="/projects/tanteo" onClick={() => setIsProjectMenuOpen(false)}>Tanteo</Link></li>
+                  <li>
+                    <Link to="/projects/prospector" onClick={closeMobileMenu}>Prospector</Link>
+                  </li>
+                  <li>
+                    <Link to="/projects/tanteo" onClick={closeMobileMenu}>Prosjekt 2</Link>
+                  </li>
                 </ul>
-              )} 
-          </li>
+              )}
+            </li>
 
-            <li><Link to="/contact">{t("contact")}</Link></li>
+            <li>
+              <Link to="/contact" onClick={closeMobileMenu}>{t("contact")}</Link>
+            </li>
           </ul>
-
         </nav>
         <main>{children}</main>
       </div>

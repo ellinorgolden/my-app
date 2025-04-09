@@ -6,7 +6,7 @@ const Tanteo = () => {
     return (
       <div>
         <header>
-        <h1>Tanteo</h1>
+        <h1>Prosjekt 2</h1>
         </header>   
       <p>{t("tanteoInfo")}</p>
     </div>
