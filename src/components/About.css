@@ -10,3 +10,9 @@
     line-height: 1.6;
     color: var(--text-color);
   }
+
+  @media (max-width: 768px) {
+    .about-section p {
+      text-align: center;
+    }
+  }

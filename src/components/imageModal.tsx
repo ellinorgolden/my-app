@@ -8,7 +8,8 @@ interface ImageModalProps {
 
 const ImageModal: React.FC<ImageModalProps> = ({ src, alt, width = '400px' }) => {
   const [open, setOpen] = useState(false);
-
+  const [isRotated, setIsRotated] = useState(false); 
+  
   return (
     <>
       <img
@@ -26,7 +27,10 @@ const ImageModal: React.FC<ImageModalProps> = ({ src, alt, width = '400px' }) =>
 
       {open && (
         <div
-          onClick={() => setOpen(false)}
+          onClick={() => {
+            setOpen(false);
+            setIsRotated(false);
+          }}
           style={{
             position: 'fixed',
             top: 0,
@@ -35,13 +39,62 @@ const ImageModal: React.FC<ImageModalProps> = ({ src, alt, width = '400px' }) =>
             bottom: 0,
             backgroundColor: 'rgba(0, 0, 0, 0.85)',
             display: 'flex',
-            flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
             zIndex: 9999,
             padding: '1rem'
           }}
         >
+          {/* Roter-knapp (øverst til venstre) */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setIsRotated(!isRotated);
+            }}
+            style={{
+              position: 'absolute',
+              top: '1rem',
+              left: '1rem',
+              backgroundColor: 'rgba(255, 255, 255, 0.15)',
+              color: '#fff',
+              border: '1px solid rgba(255, 255, 255, 0.3)',
+              padding: '10px 16px',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              backdropFilter: 'blur(4px)',
+              cursor: 'pointer',
+              zIndex: 10000
+            }}
+          >
+            🔄
+          </button>
+
+          {/* Tilbake-knapp (øverst til høyre) */}
+          <button
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpen(false);
+              setIsRotated(false);
+            }}
+            style={{
+              position: 'absolute',
+              top: '1rem',
+              right: '1rem',
+              backgroundColor: 'rgba(255, 255, 255, 0.15)',
+              color: '#fff',
+              border: '1px solid rgba(255, 255, 255, 0.3)',
+              padding: '10px 16px',
+              borderRadius: '8px',
+              fontSize: '1rem',
+              backdropFilter: 'blur(4px)',
+              cursor: 'pointer',
+              zIndex: 10000
+            }}
+          >
+            🔙
+          </button>
+
+          {/* Bildet */}
           <img
             src={src}
             alt={alt}
@@ -49,25 +102,12 @@ const ImageModal: React.FC<ImageModalProps> = ({ src, alt, width = '400px' }) =>
               maxWidth: '90vw',
               maxHeight: '80vh',
               borderRadius: '12px',
-              marginBottom: '1rem'
+              transform: isRotated ? 'rotate(90deg)' : 'rotate(0deg)',
+              transition: 'transform 0.3s ease',
+              zIndex: 1,
+              pointerEvents: 'none'
             }}
           />
-          <button
-            onClick={(e) => {
-              e.stopPropagation(); // Hindrer at modal lukkes når man klikker på knappen
-              setOpen(false);
-            }}
-            style={{
-              padding: '10px 20px',
-              fontSize: '1rem',
-              backgroundColor: '#fff',
-              border: 'none',
-              borderRadius: '6px',
-              cursor: 'pointer'
-            }}
-          >
-            🔙 Tilbake
-          </button>
         </div>
       )}
     </>
