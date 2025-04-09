@@ -1,10 +1,13 @@
 import React from "react";
 import "./Contact.css";
+import { useTranslation } from "react-i18next";
 
 const Contact: React.FC = () => {
+  const { t } = useTranslation();
+  
   return (
     <div className="contact-container">
-      <h2>Kontakt meg</h2>
+      <h2>{t("contactMe")}</h2>
       <ul>
         <li>
           <span className="icon">📞</span>
